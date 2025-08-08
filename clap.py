@@ -56,6 +56,10 @@ def analyze_clap():
         single_clap_action()
     elif clap_count == 2:
         double_clap_action()
+    elif clap_count == 3:
+        three_clap_action()
+    elif clap_count == 4:
+        four_clap_action()
     # Reset clap count after analysis
     clap_count = 0
 
@@ -66,6 +70,16 @@ def single_clap_action():
 def double_clap_action():
     pyautogui.press('m')
     print("👏👏 Double clap: Mute/Unmute toggled.")
+
+def three_clap_action():
+    # Action for three claps (next)
+    pyautogui.press('right')  # Simulate pressing the right arrow key
+    print("👏👏👏 Three claps: Next item.")
+
+def four_clap_action():
+    # Action for four claps (previous)
+    pyautogui.press('left')  # Simulate pressing the left arrow key
+    print("👏👏👏👏 Four claps: Previous item.")
 
 def start_listening():
     global listening, stream
